@@ -1,0 +1,54 @@
+[
+  {
+    "id": "v1",
+    "name": "GlassTech India Pvt Ltd",
+    "location": "Mumbai, Maharashtra",
+    "rating": 4.8,
+    "reviews": 312,
+    "delivery": "3–5 days",
+    "priceModifier": -0.03,
+    "specialties": ["Toughened", "Laminated", "DGU/IGU"],
+    "verified": true,
+    "since": 2009,
+    "contact": "+91 98200 11234"
+  },
+  {
+    "id": "v2",
+    "name": "VisionGlass Co.",
+    "location": "Pune, Maharashtra",
+    "rating": 4.5,
+    "reviews": 198,
+    "delivery": "5–7 days",
+    "priceModifier": 0,
+    "specialties": ["Clear Float", "Frosted", "Back-Painted", "Mirror"],
+    "verified": true,
+    "since": 2014,
+    "contact": "+91 98100 55678"
+  },
+  {
+    "id": "v3",
+    "name": "ClearView Glazing Pvt Ltd",
+    "location": "Navi Mumbai, Maharashtra",
+    "rating": 4.6,
+    "reviews": 241,
+    "delivery": "2–3 days",
+    "priceModifier": 0.05,
+    "specialties": ["Low-E", "Reflective", "Smart/Switchable", "Acoustic"],
+    "verified": true,
+    "since": 2011,
+    "contact": "+91 90220 99001"
+  },
+  {
+    "id": "v4",
+    "name": "Sahyadri Glass Works",
+    "location": "Nashik, Maharashtra",
+    "rating": 4.3,
+    "reviews": 87,
+    "delivery": "7–10 days",
+    "priceModifier": -0.08,
+    "specialties": ["Clear Float", "Toughened", "Mirror"],
+    "verified": false,
+    "since": 2018,
+    "contact": "+91 92100 33456"
+  }
+]

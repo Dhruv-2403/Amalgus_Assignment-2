@@ -1,0 +1,12 @@
+[
+  { "id": "a1", "category": "Hardware", "name": "Patch Fittings Set", "price": 2800, "unit": "set", "compatibleWith": ["Toughened", "Laminated"] },
+  { "id": "a2", "category": "Hardware", "name": "Spider Fittings (4-point)", "price": 4500, "unit": "set", "compatibleWith": ["Toughened", "Laminated", "Toughened + Laminated"] },
+  { "id": "a3", "category": "Frames", "name": "UPVC Window Frame", "price": 350, "unit": "rft", "compatibleWith": ["Clear Float", "Low-E", "DGU/IGU"] },
+  { "id": "a4", "category": "Frames", "name": "Aluminium Channel (U-profile)", "price": 180, "unit": "rft", "compatibleWith": ["Frosted", "Toughened", "Back-Painted"] },
+  { "id": "a5", "category": "Sealants", "name": "Structural Silicone (600ml)", "price": 650, "unit": "tube", "compatibleWith": ["DGU/IGU", "Laminated", "Toughened + Laminated", "Low-E"] },
+  { "id": "a6", "category": "Sealants", "name": "Weather Sealant (600ml)", "price": 320, "unit": "tube", "compatibleWith": ["Clear Float", "Reflective", "Frosted"] },
+  { "id": "a7", "category": "Hardware", "name": "Glass Door Hinges (pair)", "price": 1800, "unit": "pair", "compatibleWith": ["Toughened", "Frosted"] },
+  { "id": "a8", "category": "Hardware", "name": "Glass-to-Glass Clamp", "price": 450, "unit": "piece", "compatibleWith": ["Toughened", "Laminated", "Toughened + Laminated"] },
+  { "id": "a9", "category": "Shower", "name": "Frameless Shower Kit", "price": 12000, "unit": "kit", "compatibleWith": ["Toughened"] },
+  { "id": "a10", "category": "Smart", "name": "PDLC Controller + Switch", "price": 3500, "unit": "set", "compatibleWith": ["Smart/Switchable"] }
+]

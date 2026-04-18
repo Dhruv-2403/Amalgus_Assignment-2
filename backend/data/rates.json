@@ -1,0 +1,26 @@
+{
+  "date": "2026-04-18",
+  "currency": "INR",
+  "unit": "sqft",
+  "rates": [
+    { "productId": "p1", "type": "Clear Float 5mm", "rate": 52, "change": 2, "changePercent": 4.0 },
+    { "productId": "p2", "type": "Toughened 8mm", "rate": 138, "change": 5, "changePercent": 3.8 },
+    { "productId": "p3", "type": "Laminated 10mm", "rate": 220, "change": 0, "changePercent": 0 },
+    { "productId": "p4", "type": "DGU/IGU", "rate": 430, "change": 10, "changePercent": 2.4 },
+    { "productId": "p5", "type": "Frosted 6mm", "rate": 96, "change": -3, "changePercent": -3.0 },
+    { "productId": "p6", "type": "Reflective 6mm", "rate": 118, "change": 0, "changePercent": 0 },
+    { "productId": "p7", "type": "Low-E Glass", "rate": 265, "change": 8, "changePercent": 3.1 },
+    { "productId": "p8", "type": "Back-Painted 8mm", "rate": 175, "change": 4, "changePercent": 2.3 },
+    { "productId": "p9", "type": "Acoustic Glass", "rate": 320, "change": 0, "changePercent": 0 },
+    { "productId": "p10", "type": "Smart/Switchable", "rate": 950, "change": -20, "changePercent": -2.1 },
+    { "productId": "p11", "type": "Toughened+Laminated 12mm", "rate": 415, "change": 12, "changePercent": 3.0 },
+    { "productId": "p12", "type": "Mirror 5mm", "rate": 68, "change": 1, "changePercent": 1.5 }
+  ],
+  "trend": {
+    "Toughened 8mm": [130, 133, 135, 136, 134, 137, 138],
+    "Low-E Glass":   [255, 258, 260, 257, 262, 263, 265],
+    "DGU/IGU":       [415, 418, 420, 422, 425, 428, 430],
+    "Laminated 10mm":[218, 218, 220, 220, 219, 220, 220]
+  },
+  "trendLabels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Today"]
+}
