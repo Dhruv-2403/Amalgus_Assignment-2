@@ -9,13 +9,17 @@ const PORT = process.env.PORT || 5001;
 // MongoDB Connection
 const uri = process.env.MONGODB_URI;
 if (!uri) {
-  console.error('❌ Error: MONGODB_URI is not defined in .env file.');
+  console.error('Error: MONGODB_URI is not defined in .env file.');
 } else {
   mongoose.connect(uri)
     .then(() => console.log('✅ Connected to MongoDB'))
     .catch(err => console.error('❌ MongoDB connection error:', err));
 }
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 // Routes
