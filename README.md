@@ -12,7 +12,7 @@
 | Frontend | React 18 + Vite + React Router + Recharts |
 | Backend | Node.js + Express |
 | Database | **MongoDB + Mongoose** (Migrated from JSON) |
-| AI Matching | Rule-based scoring engine (Gemini-ready) |
+| AI Matching | Custom rule based matching  |
 
 ---
 
@@ -30,7 +30,12 @@
 ## Setup & Run
 
 ### 1. Database Setup
-Ensure you have a MongoDB instance (Local or Atlas).
+
+Ensure you have a MongoDB instance.
+```
+git clone https://github.com/Dhruv-2403/Amalgus_Assignment-2
+
+```
 Add your connection string to `backend/.env`:
 ```env
 MONGODB_URI=mongodb+srv://...
