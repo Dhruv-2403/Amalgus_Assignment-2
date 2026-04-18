@@ -16,7 +16,7 @@ export default function Estimate({ role }) {
   useEffect(() => {
     getProducts().then(r => {
       setProducts(r.data.data);
-      if (!productId && r.data.data.length > 0) setProductId(r.data.data[0].id);
+      if (!productId && r.data.data.length > 0) setProductId(r.data.data[0]._id);
     });
   }, []);
 
@@ -53,7 +53,7 @@ export default function Estimate({ role }) {
             <label style={{ fontSize: 12, color: '#6b7280', display: 'block', marginBottom: 4 }}>Glass type</label>
             <select value={productId} onChange={e => setProductId(e.target.value)}>
               {products.map(p => (
-                <option key={p.id} value={p.id}>{p.type} {p.thickness} — ₹{p.rateMin}–{p.rateMax}/sqft</option>
+                <option key={p._id} value={p._id}>{p.type} {p.thickness} — ₹{p.rateMin}–{p.rateMax}/sqft</option>
               ))}
             </select>
           </div>
@@ -145,7 +145,7 @@ export default function Estimate({ role }) {
                 <div style={{ fontWeight: 600, marginBottom: 10 }}>You'll also need</div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
                   {result.suggestedAllied.map(a => (
-                    <div key={a.id} style={{ background: '#f9fafb', borderRadius: 8, padding: '8px 14px', fontSize: 13 }}>
+                    <div key={a._id} style={{ background: '#f9fafb', borderRadius: 8, padding: '8px 14px', fontSize: 13 }}>
                       <span style={{ fontWeight: 500 }}>{a.name}</span>
                       <span style={{ color: '#1D9E75', marginLeft: 8, fontWeight: 600 }}>₹{a.price.toLocaleString()}/{a.unit}</span>
                     </div>

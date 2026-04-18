@@ -62,7 +62,7 @@ export default function ProductDetail({ role }) {
               <div style={{ fontWeight: 600, marginBottom: 12 }}>You'll also need</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {allied.map(a => (
-                  <div key={a.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f3f4f6' }}>
+                  <div key={a._id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #f3f4f6' }}>
                     <div>
                       <div style={{ fontWeight: 500 }}>{a.name}</div>
                       <div style={{ fontSize: 12, color: '#9ca3af' }}>{a.category}</div>
@@ -83,7 +83,7 @@ export default function ProductDetail({ role }) {
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {vendors.map((v, i) => (
-                <div key={v.id} className="card" style={{ padding: 16, borderColor: i === 0 ? '#1D9E75' : '#e5e7eb' }}>
+                <div key={v._id} className="card" style={{ padding: 16, borderColor: i === 0 ? '#1D9E75' : '#e5e7eb' }}>
                   {i === 0 && <div style={{ fontSize: 11, color: '#1D9E75', fontWeight: 600, marginBottom: 6 }}>BEST PRICE</div>}
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
                     <div>
@@ -102,7 +102,7 @@ export default function ProductDetail({ role }) {
                     </div>
                   </div>
                   <div style={{ display: 'flex', gap: 8 }}>
-                    <button className="btn btn-sm btn-primary" onClick={() => navigate(`/estimate?productId=${product.id}`)}>
+                    <button className="btn btn-sm btn-primary" onClick={() => navigate(`/estimate?productId=${product._id}`)}>
                       Get estimate
                     </button>
                     <a href={`tel:${v.contact}`} className="btn btn-sm">📞 Call</a>

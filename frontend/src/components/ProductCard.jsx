@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
   return (
     <div
       className="card"
-      onClick={() => navigate(`/product/${product.id}`)}
+      onClick={() => navigate(`/product/${product._id}`)}
       style={{ padding: 16, cursor: 'pointer', transition: 'box-shadow 0.15s, border-color 0.15s' }}
       onMouseEnter={e => {
         e.currentTarget.style.borderColor = '#1D9E75';
@@ -48,7 +48,7 @@ export default function ProductCard({ product }) {
           <div style={{ fontSize: 18, fontWeight: 700, color: '#1D9E75' }}>₹{product.rateMin}–{product.rateMax}</div>
           <div style={{ fontSize: 11, color: '#9ca3af' }}>per sqft</div>
         </div>
-        <button className="btn btn-sm btn-primary" onClick={e => { e.stopPropagation(); navigate(`/product/${product.id}`); }}>
+        <button className="btn btn-sm btn-primary" onClick={e => { e.stopPropagation(); navigate(`/product/${product._id}`); }}>
           View →
         </button>
       </div>

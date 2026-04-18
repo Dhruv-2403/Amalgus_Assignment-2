@@ -81,7 +81,7 @@ export default function Catalog({ role }) {
         </div>
       ) : (
         <div className="grid-3">
-          {products.map(p => <ProductCard key={p.id} product={p} />)}
+          {products.map(p => <ProductCard key={p._id} product={p} />)}
         </div>
       )}
 
