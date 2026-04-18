@@ -10,12 +10,17 @@ const Vendor = require('./models/Vendor');
 const Rate = require('./models/Rate');
 const Allied = require('./models/Allied');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/amalgus';
+const uri = process.env.MONGODB_URI;
+
+if (!uri) {
+  console.error('❌ Error: MONGODB_URI is not defined in .env file.');
+  process.exit(1);
+}
 
 const seed = async () => {
   try {
-    await mongoose.connect(MONGODB_URI);
-    console.log('Connected to MongoDB for seeding...');
+    await mongoose.connect(uri);
+    console.log('✅ Connected to MongoDB for seeding...');
 
     // Clear existing data
     await User.deleteMany({});
