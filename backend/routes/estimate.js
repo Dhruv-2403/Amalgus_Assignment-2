@@ -1,21 +1,37 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const router = express.Router();
 const Product = require('../models/Product');
 const Vendor = require('../models/Vendor');
 const Allied = require('../models/Allied');
 const Estimate = require('../models/Estimate');
 
+// GET /api/estimate (Debug health check)
+router.get('/', (req, res) => {
+  res.json({ success: true, message: 'Estimate service is active. Use POST to generate quotes.' });
+});
+
 // POST /api/estimate
 router.post('/', async (req, res) => {
   try {
+    console.log('📝 Received estimate request:', req.body);
     const { productId, widthMm, heightMm, quantity = 1, role = 'homeowner', userId } = req.body;
 
     if (!productId || !widthMm || !heightMm) {
+      console.warn('⚠️ Missing required fields:', { productId, widthMm, heightMm });
       return res.status(400).json({ success: false, message: 'productId, widthMm, and heightMm are required' });
     }
 
-    const product = await Product.findById(productId).catch(() => null);
-    if (!product) return res.status(404).json({ success: false, message: 'Product not found' });
+    if (!mongoose.Types.ObjectId.isValid(productId)) {
+       console.warn('⚠️ Invalid Product ID format:', productId);
+       return res.status(400).json({ success: false, message: 'Invalid product ID format' });
+    }
+
+    const product = await Product.findById(productId);
+    if (!product) {
+      console.warn('⚠️ Product not found in DB:', productId);
+      return res.status(404).json({ success: false, message: 'Product not found' });
+    }
 
     const sqm = (widthMm / 1000) * (heightMm / 1000);
     const sqft = sqm * 10.764;

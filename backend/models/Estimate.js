@@ -4,7 +4,7 @@ const estimateSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   product: {
     id: String,
-    type: String,
+    type: { type: String },
     thickness: String,
     process: String
   },
